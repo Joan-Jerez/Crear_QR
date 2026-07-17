@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Código QR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="contenedor">
+    <h1>Generador de Código QR</h1>
+    <p class="subtitulo">Escribe un texto, enlace o dato y genera tu código QR al instante.</p>
+
+    <div class="campo">
+      <label for="texto">Texto o URL</label>
+      <input type="text" id="texto" placeholder="https://ejemplo.com" />
+    </div>
+
+    <div class="campo">
+      <label for="tamano">Tamaño (px)</label>
+      <select id="tamano">
+        <option value="150">150 x 150</option>
+        <option value="200" selected>200 x 200</option>
+        <option value="300">300 x 300</option>
+        <option value="400">400 x 400</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="color">Color del QR</label>
+      <input type="color" id="color" value="#000000" />
+    </div>
+
+    <div class="campo">
+      <label for="fondo">Color de fondo</label>
+      <input type="color" id="fondo" value="#ffffff" />
+    </div>
+
+    <div class="botones">
+      <button id="generar">Generar QR</button>
+      <button id="descargar" disabled>Descargar QR</button>
+    </div>
+
+    <div id="qrcode" class="qr-caja"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
